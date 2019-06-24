@@ -1,0 +1,11 @@
+<!--pages/lesson/lesson.wxml-->
+<view class='header'>
+  <navigator class='header-search' url="/pages/search/search">
+    <icon type="search" size="14"></icon>
+  </navigator>
+</view>
+<view class='container'>
+  <block wx:for="{{lesson}}">
+    <lesson-cmp item="{{item}}"  bindmyEvent="onMyEvent"></lesson-cmp>
+  </block> 
+</view>

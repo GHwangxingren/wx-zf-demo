@@ -1,0 +1,8 @@
+<!--components/star/index.wxml-->
+<view class='stars-container'>
+  <slot name="before"></slot>
+  <block wx:for="{{[1,2,3,4,5]}}" wx:key="*this" wx:for-item="i">
+    <image src="{{stars>=i?'/images/star.png':'/images/star-none.png'}}" style='width:28rpx;height:28rpx'></image>
+  </block>
+  <slot name="after"></slot>
+</view>

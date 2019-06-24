@@ -1,0 +1,7 @@
+function formatTime(time){
+  var date=getDate(time);
+  return date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()
+}
+module.exports={
+  formatTime:formatTime
+}

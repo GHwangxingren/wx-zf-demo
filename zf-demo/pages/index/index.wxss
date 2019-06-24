@@ -1,0 +1,8 @@
+/* pages/index/index.wxss */
+.nav-title{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,37 @@
+<!--pages/search/search.wxml-->
+<view class='header'>
+  <view class='search-input'>
+    <icon type='search' size='14'></icon>
+    <input value='{{keyword}}' focus='true' confirm-type='search' placeholder='搜索' bindconfirm='onConfirm' bindinput='onInput'></input>
+    <image src='/images/cancel.png' style='width:20px;height:20px' bindtap='onClear'></image>
+  </view>
+  <text bindtap='goBack'>取消</text>
+</view>
+<view wx:if="{{!showLesson}}">
+  <view class='search-box'>
+    <view class='border-title'>热门搜索</view>
+    <view class='search-content'>
+      <block wx:for="{{hotSearch}}" wx:key="*this">
+        <text data-word='{{item}}' bindtap='onConfirm'>{{item}}</text>
+      </block>
+    </view>
+  </view>
+  <view class='search-box' wx:if="{{historySearch.length>0}}">
+    <view class='border-title'>历史搜索</view>
+    <view class='search-content'>
+      <block wx:for="{{historySearch}}" wx:key="*this">
+        <text bindtap='onConfirm' data-word="{{item}}">{{item}}</text>
+      </block>
+    </view>
+    <view class='clear-storage' bindtap='clearHistory'>清楚历史搜索</view>
+  </view>
+</view>
+<view wx:else>
+  <view class='container'>
+    <block wx:for="{{lesson}}" wx:key="id">
+      <lesson-cmp item="{{item}}"  bindmyEvent="onMyEvent"></lesson-cmp>
+    </block>
+    <none-cmp noData="{{noData}}"></none-cmp>
+    <view class='no-more' wx:if="{{noMore}}">~没有更多信息~</view>
+  </view>
+</view>

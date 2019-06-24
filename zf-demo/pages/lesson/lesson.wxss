@@ -1,0 +1,14 @@
+/* pages/lesson/lesson.wxss */
+.header{
+  width: 100%;
+  padding: 20rpx;
+  background: green;
+  box-sizing: border-box;
+}
+.header-search{
+  height: 30px;
+  padding: 0 20rpx;
+  background: white;
+  line-height: 30px;
+  border-radius: 30px;
+}

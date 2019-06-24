@@ -1,0 +1,12 @@
+/* components/noData/index.wxss */
+.none{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.no_data_image{
+  margin-top: 300rpx;
+  width:200rpx;
+}

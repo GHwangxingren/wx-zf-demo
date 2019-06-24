@@ -1,0 +1,5 @@
+/* components/star/index.wxss */
+.stars-container{
+  /* display: flex; */
+  width: 100%;
+}

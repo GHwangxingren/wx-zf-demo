@@ -1,0 +1,5 @@
+<!--components/noData/index.wxml-->
+<view class='none' wx:if="{{noData}}">
+  <image class='no_data_image' src='/images/no_data.png' mode='widthFix'></image>
+  <text>~暂无数据~</text>
+</view>

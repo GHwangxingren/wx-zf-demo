@@ -1,0 +1,40 @@
+<!--pages/detail/detail.wxml-->
+<wxs src="../../utils/formatTime.wxs" module="tools"></wxs>
+<view class='detail-container'>
+  <view class='detail-item' wx:for="{{detail}}">
+    <view class='border-title'>{{item.title}}</view>
+    <view class='detail-content'>{{item.content}}</view>
+  </view>
+</view>
+<view class='footer'>
+  <button class='btn'>
+    <image src='/images/lesson.png' bindtap='showModal'></image>
+    <view class='text'>其他课程</view>
+  </button>
+  <button class='btn' bindtap='phoneCall'>
+    <image src='/images/phone.png'></image>
+    <view class='text'>联系客服</view>
+  </button>
+  <button class='btn' bindtap='toComment'>
+    <image src='/images/comment.png'></image>
+    <view class='text'>评价</view>
+  </button>
+  <button class='btn' open-type='share'>
+    <image src='/images/share.png'></image>
+    <view class='text'>分享</view>
+  </button>
+  <button type='warn'>立即购买</button>
+</view>
+<view animation="{{animationData}}" class='modal-box' wx:if='{{!showModalStatus}}'>
+  <view class='headitl'>
+    <view>选择课程</view>
+    <icon type='clear' size='14' bindtap='hideModal'></icon>
+  </view>
+  <view class='modal-list'>
+    <view class='list-content' wx:for="{{others}}" wx:key="id">
+      <view>{{item.name}}</view>
+      <!-- <view>{{item.price}}</view> -->
+      <view>{{tools.formatTime(item.date)}}</view>
+    </view>
+  </view>
+</view>

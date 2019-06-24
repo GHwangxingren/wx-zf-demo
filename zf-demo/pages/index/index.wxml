@@ -1,0 +1,15 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<swiper-cmp></swiper-cmp>
+<view class='nav-title'>
+  <text class='border-title'>最新课程</text>
+  <navigator open-type='navigate' url='/pages/lesson/lesson'>
+    <text>全部课程</text>
+    <image src="/images/arrow.png" style='width:7px;height:13px'></image>
+  </navigator>
+</view>
+<view class='container'>
+  <block wx:for="{{lesson}}" wx:key="id">
+    <lesson-cmp item="{{item}}" bindmyEvent="onMyEvent"></lesson-cmp>
+  </block>
+</view>

@@ -1,0 +1,17 @@
+/* pages/comment/comment.wxss */
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.uploadFile{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd;
+  color: #999;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}

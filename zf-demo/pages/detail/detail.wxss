@@ -1,0 +1,64 @@
+/* pages/detail/detail.wxss */
+page{
+  background: #f5f5f5;
+}
+.detail-container{
+  margin-bottom: 100rpx
+}
+.detail-item{
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.detail-content{
+  padding-top: 20rpx;
+  color: #666;
+  text-indent: 28px;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+.btn,.btn::after{
+  padding: 0;
+  border: 0;
+  background: none;
+  content: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.btn image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.text{
+  line-height: 20px;
+}
+.modal-box{
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+}
+.headitl{
+  display: flex;
+  margin: 20rpx;
+  justify-content: space-between;
+}
+.list-content{
+  display: flex;
+  border: 1px solid red;
+}
